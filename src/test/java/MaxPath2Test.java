@@ -53,4 +53,26 @@ public class MaxPath2Test {
         assertWithMessage("We have expected more apples").that(result).isEqualTo(26);
     }
 
+    @Test
+    public void oneHeightRectangle_shouldReturnWithTheRightAmount() {
+        String input = "1 4\n" + "5 20 6 9";
+
+        int[][] orchard = MatrixGenerator.createMatrix(input);
+
+        int result = maxPath.solveWithOneToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(40);
+    }
+
+    @Test
+    public void oneWidthRectangle_shouldReturnWithTheRightAmount() {
+        String input = "4 1\n" + "9\n" + "6\n" + "20\n" + "5";
+
+        int[][] orchard = MatrixGenerator.createMatrix(input);
+
+        int result = maxPath.solveWithOneToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(40);
+    }
+
 }
