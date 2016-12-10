@@ -5,14 +5,13 @@ import static com.google.common.truth.Truth.assertWithMessage;
 
 public class MaxPathWithTokensTest {
 
-    MaxPathWithTokens maxPath;
+    private MaxPathWithTokens maxPath;
 
     @Before
     public void setUp() throws Exception {
 
         maxPath = new MaxPathWithTokens();
     }
-
 
     @Test
     public void check1kSizeMatrixProcessTime() {
@@ -54,5 +53,4 @@ public class MaxPathWithTokensTest {
 
         assertWithMessage("We have expected more apples").that(result).isEqualTo(44);
     }
-
 }

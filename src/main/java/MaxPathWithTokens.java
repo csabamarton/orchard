@@ -6,7 +6,7 @@ public class MaxPathWithTokens {
     private int[][] tokenColumn;
     private int width;
     private int height;
-    int[] startPos;
+    private int[] startPos;
 
     public int solveWithTwoToken(int[][] apples)
     {
@@ -28,9 +28,7 @@ public class MaxPathWithTokens {
 
         tokenColumn = new int[height][2];
 
-        IntStream.range(0, height).forEach(row -> {
-            tokenColumn[row] = new int[]{-1, -1};
-        });
+        IntStream.range(0, height).forEach(row -> tokenColumn[row] = new int[]{-1, -1});
     }
 
     private void findMaxRoute()

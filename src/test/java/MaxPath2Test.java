@@ -5,7 +5,7 @@ import static com.google.common.truth.Truth.assertWithMessage;
 
 public class MaxPath2Test {
 
-    MaxPath maxPath;
+    private MaxPath maxPath;
 
     @Before
     public void setUp() throws Exception {
