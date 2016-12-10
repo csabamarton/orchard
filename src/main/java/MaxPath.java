@@ -1,7 +1,6 @@
 import java.util.stream.IntStream;
 
 public class MaxPath {
-
 	private int[][] array;
 	private int[][] sumArray;
 	private int height;
