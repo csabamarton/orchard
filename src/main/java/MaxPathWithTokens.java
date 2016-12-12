@@ -10,6 +10,10 @@ public class MaxPathWithTokens {
 
     public int solveWithTwoToken(int[][] apples)
     {
+        if(apples == null) {
+            return -1;
+        }
+
         initGlobalFields(apples);
 
         findMaxRoute();

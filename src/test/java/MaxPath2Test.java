@@ -13,7 +13,7 @@ public class MaxPath2Test {
     }
 
     @Test
-    public void check1kSizeMatrixProcessTime() {
+    public void given1kSizeMatrix_shouldNotStuckTheProcessTime() {
         int[][] array = MatrixGenerator.generateMatrix(1000, 1000);
 
         int oneTokenSolution = maxPath.solveWithOneToken(array);
@@ -21,7 +21,7 @@ public class MaxPath2Test {
     }
 
     @Test
-    public void testExampleShouldWork() {
+    public void givenTheExample_ShouldWork() {
         String input = "3 3\n" + "4 0 1\n" + "1 0 0\n" + "0 4 0";
 
         int[][] orchard = MatrixGenerator.createMatrix(input);
@@ -73,6 +73,26 @@ public class MaxPath2Test {
         int result = maxPath.solveWithOneToken(orchard);
 
         assertWithMessage("We have expected more apples").that(result).isEqualTo(40);
+    }
+
+    @Test
+    public void givenNullArray_shouldReturnWithMinusOne() {
+        int[][] orchard = null;
+
+        int result = maxPath.solveWithOneToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(-1);
+    }
+
+    @Test
+    public void given1x1Array_shouldRestunrWithValidResult() {
+        String input = "1 1\n" + "4\n";
+
+        int[][] orchard = MatrixGenerator.createMatrix(input);
+
+        int result = maxPath.solveWithOneToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(4);
     }
 
 }
