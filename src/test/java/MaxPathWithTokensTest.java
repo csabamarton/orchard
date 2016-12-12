@@ -31,6 +31,17 @@ public class MaxPathWithTokensTest {
     }
 
     @Test
+    public void given1x1EmptyArray_shouldRestunrWithDoubleResult() {
+        String input = "1 1\n" + "0\n";
+
+        int[][] orchard = MatrixGenerator.createMatrix(input);
+
+        int result = maxPath.solveWithTwoToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(0);
+    }
+
+    @Test
     public void given1x1Array_shouldRestunrWithDoubleResult() {
         String input = "1 1\n" + "4\n";
 

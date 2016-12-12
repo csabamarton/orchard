@@ -95,4 +95,15 @@ public class MaxPath2Test {
         assertWithMessage("We have expected more apples").that(result).isEqualTo(4);
     }
 
+    @Test
+    public void given1x1EmptyArray_shouldRestunrWithDoubleResult() {
+        String input = "1 1\n" + "0\n";
+
+        int[][] orchard = MatrixGenerator.createMatrix(input);
+
+        int result = maxPath.solveWithOneToken(orchard);
+
+        assertWithMessage("We have expected more apples").that(result).isEqualTo(0);
+    }
+
 }
